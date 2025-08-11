@@ -1376,7 +1376,8 @@ patch the route for both ptometheus and grafana routes. Routes in openshift is s
 oc patch route grafana -n default --type=merge -p '{
   "spec": {
     "tls": {
-      "termination": "passthrough"
+      "termination": "edge",
+      "insecureEdgeTerminationPolicy": "Redirect"
     }
   }
 }'
