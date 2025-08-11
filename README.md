@@ -1368,6 +1368,38 @@ Your dashboard will show and you can see the elements in your cluster
 
 
 
+Addtional for Openshift kubernetes troubleshooting, add this step : 
+
+patch the route for both ptometheus and grafana routes. Routes in openshift is same as ingress in opensource kubernetes
+
+```
+oc patch route grafana -n default --type=merge -p '{
+  "spec": {
+    "tls": {
+      "termination": "passthrough"
+    }
+  }
+}'
+
+```
+
+in addition to prometheus run 
+```
+oc edit proxy cluster
+```
+
+add this ot the spec section :
+
+```
+spec:
+  httpProxy: http://your.proxy:port
+  httpsProxy: http://your.proxy:port
+  noProxy: .cluster.local,.svc,172.30.0.0/16
+```
+
+
+
+
 
 
 
