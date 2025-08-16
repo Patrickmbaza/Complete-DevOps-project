@@ -56,7 +56,7 @@ aws configure
 ```
 
 ```
-git clone https://github.com/akurasy/devops-complete.git
+git clone https://github.com/Patrickmbaza/Complete-DevOps-project.git
 ```
 
 change directory to the terraform directory where all infrastructure code is kept.
