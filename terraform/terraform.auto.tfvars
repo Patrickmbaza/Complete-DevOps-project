@@ -22,7 +22,7 @@ tags = {
 ################
 # EKS variables
 ################
-cluster_name                    = "zik-cluster"
+cluster_name                    = "pat-cluster"
 cluster_version                 = "1.30"
 cluster_endpoint_private_access = true
 cluster_endpoint_public_access  = true
