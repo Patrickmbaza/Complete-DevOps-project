@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket = "zik-eks1"
+    bucket = "pat-eks1"
     key = "dev/terraform.tfstate"
     region = "us-east-1"
     
